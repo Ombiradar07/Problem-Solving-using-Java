@@ -2,20 +2,23 @@ package Day_5;
 
 import java.util.Scanner;
 
-public class DecimalToOctal {
-	
-	static String  decimalToOctal(int decimal) {
-			
-		return Integer.toOctalString(decimal);
+public class OctalToBinary {
+	static String octalToBinary(String octal) {
+		
+		int decimal = Integer.parseInt(octal, 8);
+		
+		return Integer.toBinaryString(decimal);	
+		
 	}
-public static void main(String[] args) {
+	
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a Decimal number....");
-		int decimal = sc.nextInt();
+		System.out.println("Enter a Octal number....");
+		String octal = sc.next();
 		
-		String octal = decimalToOctal(decimal);
+		String binary = octalToBinary(octal);
 		
-		System.out.println("Decimal : "+ decimal+" -> Octal : "+octal);
+		System.out.println("Octal : "+ octal+" -> Binary : "+binary);
 	}
 }
 
